@@ -1,7 +1,7 @@
 replicaCount: 2
 image:
   repository: 165690630824.dkr.ecr.eu-central-1.amazonaws.com/lesson-7-ecr
-  tag: 8219ae0
+  tag: 2dfb937
   pullPolicy: Always
 service:
   type: LoadBalancer
