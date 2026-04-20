@@ -1,15 +1,12 @@
 replicaCount: 2
-
 image:
   repository: 165690630824.dkr.ecr.eu-central-1.amazonaws.com/lesson-7-ecr
-  tag: latest
+  tag: 8219ae0
   pullPolicy: Always
-
 service:
   type: LoadBalancer
   port: 8000
   targetPort: 8000
-
 configMap:
   name: django-app-config
   data:
@@ -23,11 +20,9 @@ configMap:
     POSTGRES_PASSWORD: "postgres"
     POSTGRES_HOST: "postgres"
     POSTGRES_PORT: "5432"
-
 postgres:
   image: "postgres:15"
   port: 5432
-
 resources:
   requests:
     cpu: 250m
@@ -35,7 +30,6 @@ resources:
   limits:
     cpu: 500m
     memory: 512Mi
-
 autoscaling:
   enabled: true
   minReplicas: 2
