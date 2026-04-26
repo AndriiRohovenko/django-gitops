@@ -15,11 +15,11 @@ configMap:
     DJANGO_SETTINGS_MODULE: "config.settings"
     PORT: "8000"
 externalDatabase:
-  host: ""
+  host: "django-db.c3m480c421j3.eu-central-1.rds.amazonaws.com"
   port: "5432"
-  name: ""
+  name: "app"
 secret:
-  create: true
+  create: false
   name: django-app-secret
   data:
     SECRET_KEY: ""
