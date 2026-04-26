@@ -12,17 +12,19 @@ configMap:
   data:
     DEBUG: "False"
     ALLOWED_HOSTS: "a28e805ef713a46d6a45961e1aa01977-363344798.eu-central-1.elb.amazonaws.com"
-    SECRET_KEY: "django-insecure-demo-key"
     DJANGO_SETTINGS_MODULE: "config.settings"
     PORT: "8000"
-    POSTGRES_DB: "postgres"
-    POSTGRES_USER: "postgres"
-    POSTGRES_PASSWORD: "postgres"
-    POSTGRES_HOST: "postgres"
-    POSTGRES_PORT: "5432"
-postgres:
-  image: "postgres:15"
-  port: 5432
+externalDatabase:
+  host: ""
+  port: "5432"
+  name: ""
+secret:
+  create: true
+  name: django-app-secret
+  data:
+    SECRET_KEY: ""
+    DB_USER: ""
+    DB_PASSWORD: ""
 resources:
   requests:
     cpu: 250m

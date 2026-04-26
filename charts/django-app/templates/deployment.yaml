@@ -23,6 +23,8 @@ spec:
           envFrom:
             - configMapRef:
                 name: {{ .Values.configMap.name }}
+            - secretRef:
+                name: {{ .Values.secret.name }}
           ports:
             - containerPort: {{ .Values.service.targetPort }}
               name: http
