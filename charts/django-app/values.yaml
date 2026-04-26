@@ -11,7 +11,7 @@ configMap:
   name: django-app-config
   data:
     DEBUG: "False"
-    ALLOWED_HOSTS: "a28e805ef713a46d6a45961e1aa01977-363344798.eu-central-1.elb.amazonaws.com"
+    ALLOWED_HOSTS: "*"
     DJANGO_SETTINGS_MODULE: "config.settings"
     PORT: "8000"
 externalDatabase:
